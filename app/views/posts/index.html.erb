@@ -1,0 +1,17 @@
+<h1>Total posts <%= @posts.size %></h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+  </tr>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.id %></td>
+        <td><%= post.title %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

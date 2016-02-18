@@ -1,0 +1,16 @@
+<h1>Post edit</h1>
+
+<%= form_for @post, url: "/posts/#{@post.id}" do |f| %>
+  <%= f.label :title %>
+  <br />
+  <%= f.text_field :title %>
+
+  <br />
+
+  <%= f.label :content %><br />
+  <%= f.text_area :content %>
+
+  <p>
+    <%= f.submit "Save" %>
+  </p>
+<% end %>
