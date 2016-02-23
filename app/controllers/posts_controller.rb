@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.published.recent
+    @posts = Post.recent
   end
 
   def show
@@ -18,6 +18,25 @@ class PostsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def new
+    @post = Post.new
+  end
+
+  def create
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to "/posts/#{@post.id}"
+    else
+      render :new
+    end
+  end
+
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy
+    redirect_to "/posts"
   end
 
   private

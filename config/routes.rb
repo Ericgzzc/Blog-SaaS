@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get "posts" => "posts#index"
-  get "posts/:id" => "posts#show"
-  get "posts/:id/edit" => "posts#edit"
-  patch "posts/:id" => "posts#update"
+  devise_for :users
+  resources :users
+  resources :posts
 
+  root 'posts#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
