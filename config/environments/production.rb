@@ -78,7 +78,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   CarrierWave.configure do |config|
-    config.fog_provider = 'fog/aws'                        # required
+    config.storage = :fog
     config.fog_credentials = {
       provider:              'AWS',                        # required
       aws_access_key_id:     'AKIAJSCEB45XDXPDW3KA',                        # required
