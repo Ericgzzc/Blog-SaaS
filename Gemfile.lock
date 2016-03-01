@@ -143,6 +143,7 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.11.2)
+    net-ssh (3.0.1)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     opennebula (4.14.2)
@@ -236,6 +237,7 @@ DEPENDENCIES
   fog (= 1.25)
   jbuilder (~> 2.0)
   jquery-rails
+  net-ssh
   pg
   rails (= 4.2.1)
   sass-rails (~> 5.0)

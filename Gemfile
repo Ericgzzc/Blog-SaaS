@@ -51,4 +51,5 @@ end
 group :production do
   gem 'pg'
   gem "fog", "1.25"
+  gem "net-ssh"
 end
