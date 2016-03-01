@@ -1,6 +1,8 @@
-      <tr>
-        <td><%= post.id %></td>
-        <td><%= post.title %></td>
-        <td><%= link_to "Destroy", post, class: "button", method: :delete %></td>
-      </tr>
+<tr>
+  <td><%= post.id %></td>
+  <td><%= post.title %></td>
+  <% if can_destroy_post?(post) %>
+    <td><%= link_to "Destroy", post, class: "button", method: :delete %></td>
+  <% end %>
+</tr>
 
