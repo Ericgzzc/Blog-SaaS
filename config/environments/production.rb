@@ -81,8 +81,8 @@ Rails.application.configure do
     config.storage = :fog
     config.fog_credentials = {
       provider:              'AWS',                        # required
-      aws_access_key_id:     'AKIAJSCEB45XDXPDW3KA',                        # required
-      aws_secret_access_key: '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'                        # require
+      aws_access_key_id:     '',                        # required
+      aws_secret_access_key: ''                        # require
     }
     config.fog_directory  = 'itesm-blog'                          # required
     config.fog_public     = false                                        # optional, defaults to true
